@@ -2,6 +2,7 @@
   "name": "password-maker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://amingilani.github.io/password-maker",
   "dependencies": {
     "bitcore-mnemonic": "^1.5.0",
     "gh-pages": "^1.1.0",

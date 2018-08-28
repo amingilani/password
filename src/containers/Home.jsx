@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import { Button, Icon, Container, Header } from 'semantic-ui-react'
 import Mnemonic from 'bitcore-mnemonic';
 
-const ContainerExampleText = (props) => {
+const ContainerText = (props) => {
   const phrase = props.phrase;
+  const phraseJoined = phrase.split(' ').join('');
   return (
   <Container text>
     <Header as='h2'>Secure Password Maker</Header>
@@ -13,6 +14,9 @@ const ContainerExampleText = (props) => {
       </Button>
     <p>
       {phrase}
+    </p>
+    <p>
+      {phraseJoined}
     </p>
   </Container>
   )
@@ -37,7 +41,7 @@ class Home extends Component {
     return code.toString();
   }
   render() {
-    return (<ContainerExampleText regeneratePhrase={()=>{this.regeneratePhrase()}} phrase={this.state.phrase}/>);
+    return (<ContainerText regeneratePhrase={()=>{this.regeneratePhrase()}} phrase={this.state.phrase}/>);
   }
 }
 
